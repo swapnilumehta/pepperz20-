@@ -20,9 +20,16 @@ var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
 
 //=========================================================
+// Server frontpage
+//=========================================================
+app.get('/', function (req, res) {
+    res.send('Team20 Chatbot');
+});
+
+//=========================================================
 // Bots Dialogs
 //=========================================================
 
 bot.dialog('/', function (session) {
-    session.send("Hellllloooooo people :)");
+    session.send("Greetings");
 });
